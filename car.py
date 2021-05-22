@@ -29,7 +29,7 @@ def createMaze(n) :
     ## append the Xs
     for i in range(n) :  
         for j in range(n) : 
-            maze[i][j] = random.choice(['x', ' '])
+            maze[i][j] = random.choice(['x', ' ', ' '])
             if i == 0 or i == n-1 : 
                 maze[i] = ['x']* n 
             if j == 0 or j == n-1  : 
