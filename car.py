@@ -25,7 +25,7 @@ def getDirection(x, y, n) :
          
 
 def createMaze(n) : 
-    maze = [[' ']*n for _ in range(n)]
+    maze = [['.']*n for _ in range(n)]
     ## append the Xs
     for i in range(n) :  
         if i == 0 or i == n-1 : 
