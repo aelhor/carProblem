@@ -28,11 +28,13 @@ def createMaze(n) :
     maze = [['.']*n for _ in range(n)]
     ## append the Xs
     for i in range(n) :  
-        if i == 0 or i == n-1 : 
-            maze[i] = ['x']* n 
         for j in range(n) : 
+            maze[i][j] = random.choice(['x', ' '])
+            if i == 0 or i == n-1 : 
+                maze[i] = ['x']* n 
             if j == 0 or j == n-1  : 
                 maze[i][j] = 'x'
+    
     ## choose the goal 
     rand_i = random.randint(1, n-2)
     rand_j = random.randint(1, n-2)
